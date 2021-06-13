@@ -41,14 +41,14 @@ int mode(int list[] , int no_of_elements) {
 		}
 		list_of_repeatation[i] = repeating;	
 	}
+	int max_count = 0;
 	for (int k = 0; k < no_of_elements ; k++) {
-		int max_count = 0;
-		if (list[k] > max_count) {
-			max_count = list[k];
+		printf("%d\n",list_of_repeatation[k]);
+		if (list_of_repeatation[k] > max_count) {
+			max_count = list_of_repeatation[k];
 			array_address = k;
 		}
 	}
 	return list[array_address];
 }	
-
 
