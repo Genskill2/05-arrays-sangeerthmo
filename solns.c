@@ -43,7 +43,6 @@ int mode(int list[] , int no_of_elements) {
 	}
 	int max_count = 0;
 	for (int k = 0; k < no_of_elements ; k++) {
-		printf("%d\n",list_of_repeatation[k]);
 		if (list_of_repeatation[k] > max_count) {
 			max_count = list_of_repeatation[k];
 			array_address = k;
@@ -51,4 +50,21 @@ int mode(int list[] , int no_of_elements) {
 	}
 	return list[array_address];
 }	
+
+
+int factors (int n ,  int ret[]) {
+	int factor = 0;
+	while (n != 1) {
+		for (int i = 2; i <=n ; i ++) {
+			if (n%i == 0) {
+				ret[factor] = i;
+				factor++;
+				n = n/i;
+				break;
+			}
+		}
+	}
+	return factor;
+}
+
 
